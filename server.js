@@ -11,6 +11,10 @@ require('discord-buttons')(client);
 const log = message => {
   console.log(`${message}`);
 };
+
+client.on("ready", () => {
+  client.channels.cache.get("922568401254219856").join();
+  });
 //ewing35
 
 //ewing35
@@ -113,9 +117,11 @@ client.on('clickButton', async (button) => {
   }
   db.delete(`basvuru.${button.message.id}`)
 
+
+
 });
 
-client.login(ayarlar.token);
+client.login(process.env.token);
 
 
 

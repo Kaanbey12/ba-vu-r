@@ -1,12 +1,11 @@
 {
-  "prefix":"prefix",
-  "token":"token",
-  "adminrol": "admin rolü idsi",
-  "kurucu":"kurucu rolü idsi",
-  "basvurkategori":"kategori idsi",
-    "onayred":"onay red log kanalı",
-  "yetkililog":"log kanalı",
-  "everyoneid":"everyone rol idsi",
-  "yetkilirolid":"yetkilinin rolünün idsi",
-  "sunucuid":"sunucunun idsi"
+  "prefix":"i!",
+  "adminrol": "922544553326686218",
+  "kurucu":"922544552382980098",
+  "basvurkategori":"924210272804143114",
+    "onayred":"924211752982446110",
+  "yetkililog":"924211588238565446",
+  "everyoneid":"913149927566245928",
+  "yetkilirolid":"924211875816824892",
+  "sunucuid":"913149927566245928"
 }
