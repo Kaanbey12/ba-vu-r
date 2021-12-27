@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
     '**Başka Sunucuda Yetkili Oldunuz Mu?** evet/hayır',
     '**Discord Platformunda Kaç Senedir Bulunuyorsunuz?** yıl',
     '**Üyelere hangi konuda destek vermeyi planlıyorunuz?** discord-destek / kod-destek',
-    '**Neden Ewing?** <cevabınız>'
+    '**Neden İskelet Tarikatı?** <cevabınız>'
   ]
   let sayac = 0
   
