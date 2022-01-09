@@ -73,14 +73,14 @@ exports.run = async (client, message, args) => {
     .setColor('BLUE')
     .addField('Başvuran Hakkında',[
       `**İsim ve Yaş: **\t\t${collected.map(m => m.content).slice(0,1)}`,
-      `**Günlük Aktiflik: **\t\t${collected.map(m => m.content).slice(1,2)}`,
-      `**Daha önceden Bilgisi var m?: **\t\t${collected.map(m => m.content).slice(2,3)}`,
-      `**Kac Yıldır DC kullanıyor: **\t\t${collected.map(m => m.content).slice(3,4)}`,
-	  `**Üyelere hangi konuda destek vermeyi planlıyor: **\t\t${collected.map(m => m.content).slice(4,5)}`,
-      `**Neden Ewing: **\t\t${collected.map(m => m.content).slice(5,6)}`
+      `**Günde 3 Saatten Fazla Aktif Olabilecek mi ?: **\t\t${collected.map(m => m.content).slice(1,2)}`,
+      `**Haftada 50 Invite Kasabilecek mi?: **\t\t${collected.map(m => m.content).slice(2,3)}`,
+      `**Discord Profilini Çevrimiçi Bırakabilir mi?: **\t\t${collected.map(m => m.content).slice(3,4)}`,
+	  `**Her Kullanıcıdan Sesli Teyit Alabilecek misin?: **\t\t${collected.map(m => m.content).slice(4,5)}`,
+      `**Neden Biz ?: **\t\t${collected.map(m => m.content).slice(5,6)}`
     ])
     .setTimestamp()
-    .setFooter('Developed by Ewing', message.guild.iconURL());
+    .setFooter('Developed by Çaku x ParaDoX', message.guild.iconURL());
     client.channels.cache.get(ayar.yetkililog).send({
 		buttons: [onybuton, redbuton],
 	    embed: log}).then(async m => {

@@ -4,7 +4,7 @@ const db = require('quick.db');
 const ayar = require('../ayarlar.json')
 exports.run = async (client, message, args) => { 
     message.delete()
-	if(!message.member.roles.cache.has(ayar.kurucu)) return message.channel.send('hayırdır goçum ne zamandır gurucusun sen');
+	if(!message.member.roles.cache.has(ayar.kurucu)) return message.channel.send('Üzgünüm Dostum Bunu Sadece Owner Yapabilir');
 	
 	
 	if(args[0] == 'kapat'){
