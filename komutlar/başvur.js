@@ -10,9 +10,7 @@ exports.run = async (client, message, args) => {
 	const bandata = await db.get(`ban.${message.author.id}`)
 	if(bandata) return message.reply("Başvurulardan banlısın");
 		
-  let category = message.guild.channels.cache.get(ayar.basvurkategori);
-            
-  message.guild.channels.create(`${message.author.username}-başvur`, {
+  let category = message.guild.channels.cache.get(ayar.basvurkategori);  message.guild.channels.create(`${message.author.username}-başvur`, {
     parent: category,
     permissionOverwrites: [
         {id: ayar.everyoneid, deny: [('VIEW_CHANNEL'), ('SEND_MESSAGES')]},
