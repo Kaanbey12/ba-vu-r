@@ -23,11 +23,11 @@ exports.run = async (client, message, args) => {
     
   const sorular = [
     '**İsmini Ve Yaşını Oğrenebilirmiyim?** isim/yaş',
-    '**Günde Kaç Saat Aktifsiniz?** 1/24 saat',
-    '**Başka Sunucuda Yetkili Oldunuz Mu?** evet/hayır',
-    '**Discord Platformunda Kaç Senedir Bulunuyorsunuz?** yıl',
-    '**Üyelere hangi konuda destek vermeyi planlıyorunuz?** discord-destek / kod-destek',
-    '**Neden İskelet Tarikatı?** <cevabınız>'
+    '**Günde 3 Saatten Fazla Aktif Olabilecek misin ?',
+    '**Haftada 50 Invite Kasabilecek misin** evet daha fazla kasabilirim / hayır kasamam',
+    '**Discord Profilini Çevrimiçinş Açabilir Misin?** evet/hayır',
+    '**Her Kullanıcıdan Sesli Teyit Alabilecek misin??** Hepsinden Alırım/ Vaktim Oldukça Alırım',
+    '**Neden ParaDoX?** <uzunca Açıkla>'
   ]
   let sayac = 0
   
