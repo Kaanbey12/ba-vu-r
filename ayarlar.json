@@ -1,12 +1,13 @@
 {
-  "prefix":"!",
-  "adminrol": "923694902628458506",
-  "kurucu":"923694898840997938",
-  "basvurkategori":"926256514614841354",
-    "botdurum" : "ParaDoX Yetkili Başvuru",   
-    "onayred":"929734570348257331",
-  "yetkililog":"929734570348257331",
-  "everyoneid":"812860295134445619",
-  "yetkilirolid":"923695028415627406",
-  "sunucuid":"812860295134445619"
+  "prefix":".",
+  "adminrol": "914040069923422208",
+  "kurucu":"801451024824008716",
+  "basvurkategori":"914040148944093195",
+    "botdurum" : "Vestia Yetkili Başvuru",   
+    "onayred":"931815944907550760",
+  "yetkililog":"931814858033356840",
+  "everyoneid":"907007289670631524",
+  "yetkilirolid":"914040093784817704",
+  "yetkilirolid2":"914040098381778964",
+  "sunucuid":"907007289670631524"
 }

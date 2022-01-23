@@ -3,14 +3,14 @@ const disbut = require("discord-buttons");
 const db = require('quick.db');
 const ayar = require('../ayarlar.json')
 exports.run = async (client, message, args) => { 
-    message.delete()
+    
 	const basvurdata = await db.get(`basvurbilgi`);
 	if(basvurdata) return message.reply(`Başvurular geçici olarak durdurulmuştur.`);
 	
 	const bandata = await db.get(`ban.${message.author.id}`)
 	if(bandata) return message.reply("Başvurulardan banlısın");
 		
-  let category = message.guild.channels.cache.get(ayar.basvurkategori);  message.guild.channels.create(`${message.author.username}-başvur`, {
+  let category = message.guild.channels.cache.get(ayar.basvurkategori);  message.guild.channels.create(`${message.author.username}-başvurusu`, {
     parent: category,
     permissionOverwrites: [
         {id: ayar.everyoneid, deny: [('VIEW_CHANNEL'), ('SEND_MESSAGES')]},
@@ -22,10 +22,11 @@ exports.run = async (client, message, args) => {
   const sorular = [
     '**İsmini Ve Yaşını Oğrenebilirmiyim?** isim/yaş',
     '**Günde 3 Saatten Fazla Aktif Olabilecek misin ?** Günde .. Saat Aktifim',
-    '**Haftada 50 Invite Kasabilecek misin** evet daha fazla kasabilirim / hayır kasamam',
+    '**Günde Ne Kadar İnvite Kasabilirsin ??** .... Tane Kasabilirim',
     '**Discord Profilini Çevrimiçini Açabilir Misin?** evet/hayır',
     '**Her Kullanıcıdan Sesli Teyit Alabilecek misin??** Hepsinden Alırım/ Vaktim Oldukça Alırım',
-    '**Neden ParaDoX?** <uzunca Açıkla>'
+    '**Bionuza .gg/vestia Yazabilir Misin??** Evet Yazarım / Hayır Yazamam',
+    '**Neden Vestia?** <uzunca Açıkla>'
   ]
   let sayac = 0
   
@@ -72,13 +73,14 @@ exports.run = async (client, message, args) => {
     .addField('Başvuran Hakkında',[
       `**İsim ve Yaş: **\t\t${collected.map(m => m.content).slice(0,1)}`,
       `**Günde 3 Saatten Fazla Aktif Olabilecek mi ?: **\t\t${collected.map(m => m.content).slice(1,2)}`,
-      `**Haftada 50 Invite Kasabilecek mi?: **\t\t${collected.map(m => m.content).slice(2,3)}`,
+      `**Günde Ne Kadar İnvite Kasabilirsin?: **\t\t${collected.map(m => m.content).slice(2,3)}`,
       `**Discord Profilini Çevrimiçi Bırakabilir mi?: **\t\t${collected.map(m => m.content).slice(3,4)}`,
 	  `**Her Kullanıcıdan Sesli Teyit Alabilecek misin?: **\t\t${collected.map(m => m.content).slice(4,5)}`,
-      `**Neden Biz ?: **\t\t${collected.map(m => m.content).slice(5,6)}`
+          `**Bionuza .gg/vestia Yazabilir Misin ??: **\t\t${collected.map(m => m.content).slice(5,6)}`,
+      `**Neden Biz ?: **\t\t${collected.map(m => m.content).slice(6,7)}`
     ])
     .setTimestamp()
-    .setFooter('Developed by Çaku x ParaDoX', message.guild.iconURL());
+    .setFooter('Vestia Yetkili Başvuru Sistemi', message.guild.iconURL());
     client.channels.cache.get(ayar.yetkililog).send({
 		buttons: [onybuton, redbuton],
 	    embed: log}).then(async m => {

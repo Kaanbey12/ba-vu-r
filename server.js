@@ -49,7 +49,7 @@ client.on('clickButton', async (button) => {
     .setDisabled();
 
     const onaymsj = new Discord.MessageEmbed()
-    .setAuthor('ParaDoX', button.message.guild.iconURL({dynamic: true, type: 'gif', size: 1024}))
+    .setAuthor('Vestia Yetkili Başvuru Botu', button.message.guild.iconURL({dynamic: true, type: 'gif', size: 1024}))
     .setDescription(`Başvurunuz Onaylandı ve Yetkili Rolleriniz verildi, Tebrikler :)`)
     .setColor('GREEN');
 
@@ -65,7 +65,8 @@ client.on('clickButton', async (button) => {
     await button.message.edit(`<@${basvuruGonderenID}> adlı kişinin, Başvurusu \`${button.clicker.user.tag}\` isimli yetkili tarafından Kabul edildi`, onybuton)
     await client.channels.cache.get(ayarlar.onayred).send(`<@${basvuruGonderenID}>,`, onaymsj)
     await client.guilds.cache.get(ayarlar.sunucuid).members.cache.get(basvuruGonderenID).roles.add(ayarlar.yetkilirolid)
-	isimdes.send('Hey Selam! Ben ParaDoX Yetkili Başvuru Botuyum :wave: \nYaptığın yetkili başvurusu onaylandı öncelikle tebrik ederim artık yetkili ekibimizdensin. :partying_face: \nAncak bazı görevlerin olucak alta bunları anlatıcam iyi dinle :slight_smile: \n\n\n **1 -** <#923695442359898193> Kanalında Aktif Bir Şekilde Çalışmak <#923695472596635698> Bir Kez Okumanı Tavsiye Ederim.\n\n**2 -** <#923987732412379168> Katagorisinde Aktif Kalarak Kullanıcıların Bildirimlerini Dikkate Alman lazım\n\n**3 -** <#923695484969840740> Kanalınıda Okumayı Tavsiye Ederiz Aynı Şekilde Uymassan Yetkin Gidebilir vb.\n\n**4 **- Mesajlar Sürekli Kontrol Edilir Bi Kanalda Bir Mesaj Silmen Kesinlikle Yasaktır Yaptığın Her Hareket İzlenicektir\n\n\n **Evet ama hep böyle sıkı yönetim mi var hep çalışmak mı var?**\nTabikide hayır. Arasıra yetkili ekibimiz arasında oynadığımız eğlenceli vakitlerde oluyor, birlikte oyunlar oynar şakalaşırız.\n\n **Gelelim Ektiğimizi Biçmeye**\nAktif ve Düzenli Çalışmanın ardından tabikide ödüller var eğer kendini gösterirsen sırasıyla yetkin yükselicek ve daha üst konumlarda görev alıcaksın <:kedyyi:876785789076373504> \n O zaman Şimdiden bol şans <:kedyyi:876785789076373504> ParaDoX Yetkili Ekibine Hoş Geldin :heart:')
+client.guilds.cache.get(ayarlar.sunucuid).members.cache.get(basvuruGonderenID).roles.add(ayarlar.yetkilirolid2)
+	isimdes.send('Hey Selam! Ben Vestia Yetkili Başvuru Botuyum :wave: \nYaptığın yetkili başvurusu onaylandı öncelikle tebrik ederim artık yetkili ekibimizdensin. :partying_face: \nAncak bazı görevlerin olucak alta bunları anlatıcam iyi dinle :slight_smile: \n\n\n **1 -** <#914040175234011156> Kanalında Aktif Bir Şekilde Çalışmak <#914040159736037416> Bir Kez Okumanı Tavsiye Ederim.\n\n**2 -** <#914040152102416394> Katagorisinde Aktif Kalarak Kullanıcıların Bildirimlerini Dikkate Alman lazım\n\n**3 **- Mesajlar Sürekli Kontrol Edilir Bi Kanalda Bir Mesaj Silmen Kesinlikle Yasaktır Yaptığın Her Hareket İzlenicektir\n\n\n **Evet ama hep böyle sıkı yönetim mi var hep çalışmak mı var?**\nTabikide hayır. Arasıra yetkili ekibimiz arasında oynadığımız eğlenceli vakitlerde oluyor, birlikte oyunlar oynar şakalaşırız.\n\n **Gelelim Ektiğimizi Biçmeye**\nAktif ve Düzenli Çalışmanın ardından tabikide ödüller var eğer kendini gösterirsen sırasıyla yetkin yükselicek ve daha üst konumlarda görev alıcaksın \n O zaman Şimdiden bol şans Vestia Yetkili Ekibine Hoş Geldin :heart:')
   }
   if(button.id === 'red'){
     button.reply.defer()
@@ -102,7 +103,7 @@ client.on('clickButton', async (button) => {
     .setDisabled();
 
     const redmsg = new Discord.MessageEmbed()
-    .setAuthor('ParaDoXg', button.message.guild.iconURL({dynamic: true, type: 'gif', size: 1024}))
+    .setAuthor('Vestia', button.message.guild.iconURL({dynamic: true, type: 'gif', size: 1024}))
     .setDescription(`<@${basvuruGonderenID}> Başvurunuz, \`${collected.map(m => m.content).slice(0,1)}\` nedeniyle ${button.clicker.user} tarafından Reddedildi`)
     .setColor('RED');
 
