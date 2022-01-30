@@ -129,3 +129,12 @@ client.on("ready", () => {
 });
 
 
+client.on("guildMemberUpdate", async (oldMember, newMember) => {
+let kanal = "914040173661130803"
+let rol = "914040093784817704"
+if (oldMember.guild.id !== '907007289670631524') return;
+if(oldMember._roles === newMember._roles) return;
+if(oldMember.roles.cache.has(rol)) return;
+if(!newMember.roles.cache.has(rol)) return;
+client.channels.cache.get(kanal).send(`<@${newMember.author.id}> Yetkili kadromuza hoşgeldin cumartesi günleri yetkili artımı yapıyoruz`)
+});
