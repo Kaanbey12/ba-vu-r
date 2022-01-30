@@ -129,3 +129,12 @@ client.on("ready", () => {
 });
 
 
+client.on("guildMemberUpdate", async (oldMember, newMember) => {
+let yetkilichat = "914040173661130803"
+let atlasrol = "914040093784817704"
+if (oldMember.guild.id !== '907007289670631524') return;
+if(oldMember._roles === newMember._roles) return;
+if(oldMember.roles.cache.has(atlasrol)) return;
+if(!newMember.roles.cache.has(atlasrol)) return;
+client.channels.cache.get(yetkilichat).send(`${newMember} Yetkili kadromuza hoşgeldin cuma günleri yetki alımı artımı yapıyoruz!`)
+});
