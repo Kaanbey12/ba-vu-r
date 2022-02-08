@@ -1,13 +1,13 @@
 {
-  "prefix":".",
-  "adminrol": "914040069923422208",
-  "kurucu":"801451024824008716",
-  "basvurkategori":"914040148944093195",
+  "prefix":"!",
+  "adminrol": "940243917335593040",
+  "kurucu":"889817972636540948",
+  "basvurkategori":"940685343949221918",
     "botdurum" : "Vestia Yetkili Başvuru",   
-    "onayred":"931815944907550760",
-  "yetkililog":"931814858033356840",
+    "onayred":"940685714838937660",
+  "yetkililog":"940685343949221918",
   "everyoneid":"907007289670631524",
-  "yetkilirolid":"914040093784817704",
-  "yetkilirolid2":"914040098381778964",
-  "sunucuid":"907007289670631524"
+  "yetkilirolid":"940243932594462770",
+  "yetkilirolid2":"940243932594462770",
+  "sunucuid":"940225593700671508"
 }
